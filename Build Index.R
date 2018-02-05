@@ -4,7 +4,7 @@ library(lubridate)
 
 options(scipen=10000)
 
-df <- read.csv("2018freshie.csv")
+df <- read.csv("2018jan.csv")
 
 df <- df %>%
   select(Week.beginning,Global.New.cash.sales..WordPress.com) %>%
@@ -28,3 +28,4 @@ ggplot(df, aes(x=weeknum, y=cash_sales, color = year)) +
   ylab("Weekly Revenue") + 
   xlab("Week Number") + 
   ggtitle("Overall Revenue by Week, 2012-2018")
+
